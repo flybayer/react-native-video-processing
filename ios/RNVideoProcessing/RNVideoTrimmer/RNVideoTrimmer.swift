@@ -70,7 +70,7 @@ class RNVideoTrimmer: NSObject {
         exportSession.outputFileType = AVFileTypeMPEG4
         exportSession.shouldOptimizeForNetworkUse = true
 
-        if saveToCameraRoll && saveWithCurrentDate {
+        if saveWithCurrentDate {
           let metaItem = AVMutableMetadataItem()
           metaItem.key = AVMetadataCommonKeyCreationDate as (NSCopying & NSObjectProtocol)?
           metaItem.keySpace = AVMetadataKeySpaceCommon
@@ -162,7 +162,7 @@ class RNVideoTrimmer: NSObject {
         compressionEncoder!.outputFileType = AVFileTypeMPEG4
         compressionEncoder!.outputURL = NSURL.fileURL(withPath: outputURL.path)
         compressionEncoder!.shouldOptimizeForNetworkUse = true
-        if saveToCameraRoll && saveWithCurrentDate {
+        if saveWithCurrentDate {
           let metaItem = AVMutableMetadataItem()
           metaItem.key = AVMetadataCommonKeyCreationDate as (NSCopying & NSObjectProtocol)?
           metaItem.keySpace = AVMetadataKeySpaceCommon
